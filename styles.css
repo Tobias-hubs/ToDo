@@ -1,0 +1,79 @@
+html {
+  height: 100vh;
+  min-width: 600px;
+  background-image: url("Notebook-PPT-Backgrounds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+.container {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+
+}
+
+.main {
+  padding: 20px;
+
+}
+
+form {
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+}
+
+input [type="text"] { 
+  height: 40px;
+  outline: 0;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+button {
+  font-size: 1rem;
+
+}
+
+button:hover {
+  color: chartreuse;
+}
+
+ul { 
+  padding-left: 0px;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  
+}
+
+i { 
+  pointer-events: none;
+}
+
+.todoList { 
+  background-color: aliceblue;
+}
+
+.todo-item { 
+  flex-grow: 1;
+}
+
+.clearAll {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.clearAll:hover { 
+  color:rgb(240, 25, 25)
+}
