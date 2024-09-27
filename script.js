@@ -10,9 +10,14 @@ const todos = [];
 function handleSubmitForm(e) {
     e.preventDefault(); 
     const input = document.querySelector("input");
-    if (input.value !="")
+    const errorMessage = document.getElementById("errorMessage");
+    if (input.value !="") {
         addTodo(input.value);
 input.value = "";
+errorMessage.textContent = ""; 
+} else { 
+    errorMessage.textContent = "Du måste skriva något!";
+}
 }
 
 function handleClickDeleteOrCheck(e) {
