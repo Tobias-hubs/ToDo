@@ -4,7 +4,7 @@ const ul = document.querySelector("ul").addEventListener("click", handleClickDel
 const clearAll = document.getElementById("clearAll").addEventListener("click", handleClearAll);
 const completedCount = document.getElementById("completedCount");
 
-let todos = []; 
+const todos = []; 
 
 // Events 
 function handleSubmitForm(e) {
