@@ -1,15 +1,15 @@
 // Selectors
-document.querySelector("form").addEventListener("submit", handleSubmitForm);
-document.querySelector("ul").addEventListener("click", handleClickDeleteOrCheck);
-document.getElementById("clearAll").addEventListener("click", handleClearAll);
-document.getElementById("completedCount");
+const form = document.querySelector("form").addEventListener("submit", handleSubmitForm);
+const ul = document.querySelector("ul").addEventListener("click", handleClickDeleteOrCheck);
+const clearAll = document.getElementById("clearAll").addEventListener("click", handleClearAll);
+const completedCount = document.getElementById("completedCount");
 
 let todos = []; 
 
 // Events 
 function handleSubmitForm(e) {
     e.preventDefault(); 
-    let input = document.querySelector("input");
+    const input = document.querySelector("input");
     if (input.value !="")
         addTodo(input.value);
 input.value = "";
@@ -30,8 +30,8 @@ function handleClearAll(e) {
 
 //Helpers
 function addTodo(todo) {
-    let ul = document.querySelector("ul");
-    let li = document.createElement("li");
+    const ul = document.querySelector("ul");
+    const li = document.createElement("li");
 li.innerHTML =  ` 
 <span class="todo-item">${todo}</span>
 <button name="checkButton"><i class="fas fa-check-square"></i></button>
@@ -44,8 +44,8 @@ li.innerHTML =  `
 }
 
 function checkTodo(e) { 
-    let item = e.target.parentNode;
-    let index = Array.from(item.parentNode.children).indexOf(item);
+    const item = e.target.parentNode;
+    const index = Array.from(item.parentNode.children).indexOf(item);
     
     if (todos[index].completed) {
         todos[index].completed = false;
@@ -62,14 +62,17 @@ function checkTodo(e) {
 
 
 function deleteTodo(e) {
-    let item = e.target.parentNode; 
+    const item = e.target.parentNode; 
+    const index = Array.from(item.parentNode.children).indexOf(item); //Komplettering
+    
+    todos.splice(index, 1); //Komplettering 
     item.remove();
     updateCompletedCount();
  } 
 
  function updateCompletedCount() { 
    
-    let completedCount = todos.filter(todo => todo.completed).length;
+    const completedCount = todos.filter(todo => todo.completed).length;
 
  
     document.getElementById("completedCount").innerText = completedCount;
