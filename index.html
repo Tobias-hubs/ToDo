@@ -5,37 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles2.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Todo-Tobias</title>
 
 </head>
-<body class="container"> 
+
+<body> 
     
-    <header class="header1">
-      <h1 class="headline">Todo-Tobias</h1>
-        </header>
-      
-        <section class="main">
-            <form> 
-                <input type="text" placeholder="Ny uppgift...">
-                <button type="submit"><i class="fas fa-plus-square"></i></button>   
-                <span id="errorMessage"></span> 
+    <div class="container">
+        
+    <!-- <header class="header1">   -->
+
+
+
+
+   
+    <section class="main">
+       
+       
+   
+        <div class="todoList">
+
+ <h1 class="headline">My ToDo</h1>
+            <p class="completed-count"><span id="completedCount">0</span> completed </p>
+            <!-- <a class="clearAll" id="clearAll">Rensa Allt</a>  -->
+            
+           
+            <form id="myForm">
+                
+                <!-- <div class="input-container">  -->
+                    
+                <input type="text" placeholder="" id="todo-input"> <!--Ny uppgift... -->
+                 <!--  fas fa-plus-square -->
+                 
+                 
+                  
+            
+                     <button type="submit"><i class="ok-button"></i>OK</button>
+                     
+          
+                  
+            
             </form>
-            <section class="todoList"> 
+            <span id="errorMessage" class="hidden"></span>
+             
 
-                <ul>    
+              
+        </div><ul id="task-list"></ul>   <!-- The ul must be placed here to be inside white box "main class" -->
+        
 
-
-                </ul>
-                <p>Antal utförda uppgifter: <span id="completedCount">0</span></p>
-                <a class="clearAll" id="clearAll">Rensa Allt</a>
-            </section>
-
-        </section>
+    </section>
     
-    
+</div>
+</div>
+
     <script type="text/javascript" src="script.js"></script>
 </body>
 
